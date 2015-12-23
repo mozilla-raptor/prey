@@ -25,17 +25,15 @@ DATA=$(./node_modules/.bin/raptor query measure \
 
 REGRESSIONS=$(echo "$DATA" | ./node_modules/.bin/raptor regression)
 
-echo "$REGRESSIONS"
-
-exit 0
-
-./node_modules/.bin/raptor track \
+TRACKINGS=$(echo "$REGRESSIONS" | ./node_modules/.bin/raptor track \
   --host $DB_HOST \
   --port $DB_PORT \
   --username $DB_USERNAME \
   --password $DB_PASSWORD \
   --database $DB_NAME \
-  --protocol $DB_PROTOCOL
+  --protocol $DB_PROTOCOL)
+
+echo "$TRACKINGS"
 
 exit 0
 
