@@ -33,12 +33,9 @@ TRACKINGS=$(echo "$REGRESSIONS" | ./node_modules/.bin/raptor track \
   --database $DB_NAME \
   --protocol $DB_PROTOCOL)
 
-echo "$TRACKINGS"
-
-exit 0
-
-
-| ./node_modules/.bin/raptor bug \
+BUGS=$(./node_modules/.bin/raptor bug \
   --username $BZ_USERNAME \
   --password $BZ_PASSWORD \
-  --token $BITLY_TOKEN
+  --token $BITLY_TOKEN)
+
+echo "$BUGS"
