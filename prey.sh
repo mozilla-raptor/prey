@@ -8,7 +8,7 @@ MEMORY="512"
 BRANCH="master"
 TEST="cold-launch"
 
-./node_modules/.bin/raptor query measure \
+DATA=$(./node_modules/.bin/raptor query measure \
   --host $DB_HOST \
   --port $DB_PORT \
   --username $DB_USERNAME \
@@ -21,7 +21,15 @@ TEST="cold-launch"
   --time $TIME \
   --device $DEVICE \
   --memory $MEMORY \
-  --branch $BRANCH | ./node_modules/.bin/raptor regression | ./node_modules/.bin/raptor track \
+  --branch $BRANCH)
+
+REGRESSIONS=$(echo "$DATA" | ./node_modules/.bin/raptor regression)
+
+echo "$REGRESSIONS"
+
+exit 0
+
+./node_modules/.bin/raptor track \
   --host $DB_HOST \
   --port $DB_PORT \
   --username $DB_USERNAME \
