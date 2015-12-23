@@ -21,7 +21,7 @@ TEST="cold-launch"
   --time $TIME \
   --device $DEVICE \
   --memory $MEMORY \
-  --branch $BRANCH
+  --branch $BRANCH | ./node_modules/.bin/raptor regression
 
 
 exit 0
