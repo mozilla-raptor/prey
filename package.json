@@ -29,7 +29,5 @@
       "email": "rwood@mozilla.com"
     }
   ],
-  "dependencies": {
-    "@mozilla/raptor": "5.0.1"
-  }
+  "dependencies": {}
 }
