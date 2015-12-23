@@ -1,6 +1,5 @@
 #! /bin/bash
 
-RAPTOR="./node_modules/.bin/raptor"
 CONTEXT="$1"
 METRIC="visuallyLoaded"
 TIME="14d"
@@ -29,6 +28,6 @@ TEST="cold-launch"
   --password $DB_PASSWORD \
   --database $DB_NAME \
   --protocol $DB_PROTOCOL | ./node_modules/.bin/raptor bug \
-  --username $BZ_USERNAME \ 
+  --username $BZ_USERNAME \
   --password $BZ_PASSWORD \
   --token $BITLY_TOKEN
