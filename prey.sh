@@ -21,18 +21,18 @@ TEST="cold-launch"
   --time $TIME \
   --device $DEVICE \
   --memory $MEMORY \
-  --branch $BRANCH | ./node_modules/.bin/raptor regression
-
-
-exit 0
-
-./node_modules/.bin/raptor regression | ./node_modules/.bin/raptor track \
+  --branch $BRANCH | ./node_modules/.bin/raptor regression | ./node_modules/.bin/raptor track \
   --host $DB_HOST \
   --port $DB_PORT \
   --username $DB_USERNAME \
   --password $DB_PASSWORD \
   --database $DB_NAME \
-  --protocol $DB_PROTOCOL | ./node_modules/.bin/raptor bug \
+  --protocol $DB_PROTOCOL
+
+exit 0
+
+
+| ./node_modules/.bin/raptor bug \
   --username $BZ_USERNAME \
   --password $BZ_PASSWORD \
   --token $BITLY_TOKEN
