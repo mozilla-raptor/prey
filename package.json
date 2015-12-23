@@ -1,0 +1,35 @@
+{
+  "name": "raptor-prey",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Automated regression workflow for mozilla-raptor",
+  "main": "index.js",
+  "scripts": {
+    "start": "./prey.sh"
+  },
+  "repository": "mozilla-raptor/prey",
+  "keywords": [
+    "automated",
+    "regression",
+    "workflow"
+  ],
+  "author": "Eli Perelman <eli@eliperelman.com> (http://eliperelman.com/)",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20OS&component=Gaia%3A%3APerformanceTest"
+  },
+  "homepage": "https://developer.mozilla.org/en-US/Firefox_OS/Automated_testing/Raptor",
+  "maintainers": [
+    {
+      "name": "eliperelman",
+      "email": "eli@eliperelman.com"
+    },
+    {
+      "name": "rwood-moz",
+      "email": "rwood@mozilla.com"
+    }
+  ],
+  "dependencies": {
+    "@mozilla/raptor": "5.0.1"
+  }
+}
