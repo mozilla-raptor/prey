@@ -34,6 +34,8 @@ TRACKINGS=$(echo "$REGRESSIONS" | ./node_modules/.bin/raptor track \
   --protocol $DB_PROTOCOL)
 
 BUGS=$(./node_modules/.bin/raptor bug \
+  --url $BZ_URL \
+  --timeout $BZ_TIMEOUT \
   --username $BZ_USERNAME \
   --password $BZ_PASSWORD \
   --token $BITLY_TOKEN)
