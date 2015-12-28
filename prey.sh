@@ -10,7 +10,8 @@ TEST="cold-launch"
 
 if [ -z "$CONTEXT" ]; then
   echo "Missing context for determining regressions"
-  exit 1
+  # Exiting with 0 code to keep heroku from telling me it crashed
+  exit 0
 fi
 
 ./node_modules/.bin/raptor query measure \
