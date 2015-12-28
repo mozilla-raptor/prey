@@ -8,6 +8,11 @@ MEMORY="512"
 BRANCH="master"
 TEST="cold-launch"
 
+if [ -z "$CONTEXT" ]; then
+  echo "Missing context for determining regressions"
+  exit 1
+fi
+
 ./node_modules/.bin/raptor query measure \
   --host $DB_HOST \
   --port $DB_PORT \
