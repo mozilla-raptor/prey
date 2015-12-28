@@ -5,7 +5,8 @@
   "description": "Automated regression workflow for mozilla-raptor",
   "main": "index.js",
   "scripts": {
-    "prey": "./prey.sh"
+    "prey": "./prey.sh",
+    "start": ""
   },
   "repository": "mozilla-raptor/prey",
   "keywords": [
